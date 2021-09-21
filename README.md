@@ -1,4 +1,5 @@
-# F1timing
+# RaceTiming
+<img src="demo.gif" width="1440"/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.5.
 

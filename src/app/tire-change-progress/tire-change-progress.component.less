@@ -1,0 +1,49 @@
+@import "../global.less";
+
+.tire-line:hover {
+  box-shadow: 2px 2px 2px 2px #aaa ;
+}
+
+.tire-change-progress-wrapper {
+  display: flex;
+  margin: 0 30px;
+  width: 100%;
+}
+
+.current-tile-lap-count {
+  z-index: 10;
+  position: relative;
+  right: 15px;
+  top: 8px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid;
+  font-size: 0.6em;
+  text-align: center;
+  line-height: 1.8em;
+  background-color: @var-tire-background-color;
+  box-decoration-break:slice()
+}
+
+.tire-icon {
+  margin-top: 6px;
+  z-index: 10;
+  position: relative;
+  right: 15px;
+  bottom: 18px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid;
+  font-size: 0.6em;
+  text-align: center;
+  line-height: 1.8em;
+  background-color: @var-tire-background-color;
+  box-decoration-break:slice()
+}
+
+.tire-line {
+  height: 7px;
+  margin-top: 20px;
+}

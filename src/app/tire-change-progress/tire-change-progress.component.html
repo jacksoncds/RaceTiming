@@ -1,0 +1,12 @@
+<div class="tire-change-progress-wrapper">
+  <div *ngFor="let tire of tires; index as i; trackBy: getLaps" style="display:flex">
+    <div class="tire-line" [title]="getTireLaps(i)" [style.background]="getTireColor(tire.type)"
+      [style.width]="getTireLapsInPixels(i)">
+      <div class="tire-icon" [ngStyle]="{'border-color':getTireColor(tire.type)}">
+        {{tire.type.substring(0, 1)}}
+      </div>
+    </div>
+  </div>
+  <div class="current-tile-lap-count" *ngIf="getLapsSinceLastTireChange() > 0"
+    [ngStyle]="{'border-color':getLastTireColor()}">{{getLapsSinceLastTireChange()}}</div>
+</div>

@@ -1,0 +1,24 @@
+<div class="driver-position-wrapper">
+  <div class="position">{{driver.place}}</div>
+  <div class="color" [style.background]="driver.color"></div>
+  <div class="name">{{driver.driver}}</div>
+  <div class="position-gained">
+    <div>
+      <span class="pos-gained chevron top" *ngIf="driver.positionsGained > 0"></span>
+      <span class="pos-gained chevron bottom" *ngIf="driver.positionsGained < 0"></span>
+      <span class="pos-gained dash" *ngIf="driver.positionsGained == 0">-</span>
+    </div>
+    <div>
+      <span>
+        {{getGainedPositions()}}
+      </span>
+    </div>
+  </div>
+  <div class="time-to-leader time-column">{{driver.timeToLeader| timeFormat: driver.timeToLeader:true}}</div>
+  <div class="time-interval time-column">{{driver.timeInterval | timeFormat: driver.timeInterval:true}}</div>
+  <div class="last-lap-time time-column">{{driver.lastLapTime | timeFormat: driver.lastLapTime:false}}</div>
+  <div class="drs-icon" [ngClass]="{'drs-on':driver.hasDrsEnabled == true}">DRS</div>
+  <div class="tire-change">
+    <app-tire-change-progress [tires]="getTires()" [currentLap]="currentLap"></app-tire-change-progress>
+  </div>
+</div>

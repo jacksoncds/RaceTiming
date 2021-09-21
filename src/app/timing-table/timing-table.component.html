@@ -1,0 +1,26 @@
+<div class="header">
+  <div class="lap-count">Lap {{currentLap}}/{{totalLaps}}</div>
+  <div class="grand-prix-header">
+    <span>Formula 1 Random Data Grand Prix 2021</span>
+    <span style="font-size: 10px;">*Data is random and probably won't make sense.*</span>
+  </div>
+</div>
+<div>
+  <div class="header-wrapper">
+    <span class="int">INT</span>
+    <span class="last-lap">LAST LAP</span>
+    <span class="drs">DRS</span>
+    <div class="lap-mark-wrapper">
+      <span class="lap-mark">10</span>
+      <span class="lap-mark">20</span>
+      <span class="lap-mark">30</span>
+      <span class="lap-mark">40</span>
+      <span class="lap-mark">50</span>
+      <span class="lap-mark">60</span>
+      <span class="lap-mark">70</span>
+      <span class="lap-mark">80</span>
+    </div>
+  </div>
+  <app-driver-position *ngFor="let driver of timingFramePositions" [driver]="driver" [currentLap]="currentLap">
+  </app-driver-position>
+</div>
